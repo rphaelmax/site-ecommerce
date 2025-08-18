@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/logo-star.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="icon-esquerda" role="button" tabindex="0">
+            <svg viewBox="0 0 24 24" focusable="false">
+                <circle cx="11" cy="11" r="7" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+        </div>
+        <div class="main-container">
+            <div class="logo-star"><img src="assets/astrologo.png" class="astrologo"></div>
+            <nav class="navtab">
+                <a href="index.html" tabindex="0">Início</a>
+                <a href="produtos.html" class="dropdown" tabindex="0">
+                    Produtos
+                    <svg viewBox="0 0 24 24" focusable="false">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </a>
+                <a href="contato.html" tabindex="0">Contato</a>
+                <a href="sobre.html" tabindex="0">Sobre</a>
+            </nav>
+        </div>
+        <div class="icons-direita">
+            <a href="cadastro.html" class="cadastro-link">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" title="User icon">
+                    <circle cx="12" cy="7" r="4" />
+                    <path d="M5.5 21a7.5 7.5 0 0 1 13 0" />
+                </svg>
+            </a>
+            <a href="#carrinho" class="cart-link">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" title="Shopping cart icon">
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <aside id="carrinho">
+        <div class="header-carrinho">
+            <h2>Carrinho</h2>
+            <a href="#" class="fechar">✖</a>
+        </div>
+        <div class="conteudo-carrinho">
+            <p>Seu carrinho está vazio 🛒</p>
+        </div>
+    </aside>
+
+    <main class="container">
+        <h1>Contato</h1>
+        <p class="intro">
+            Tem alguma dúvida, sugestão ou quer falar com a gente? Preencha o formulário abaixo e entraremos em contato
+            o mais breve possível!
+        </p>
+
+        <form class="form">
+            <div class="form-row">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="E-mail" required>
+            </div>
+
+            <input type="tel" placeholder="Telefone">
+
+            <textarea placeholder="Comentário" rows="5"></textarea>
+
+            <button class="enviar" type="submit">Enviar</button>
+        </form>
+    </main>
+
+
+</body>
+
+</html>
