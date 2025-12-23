@@ -1,0 +1,159 @@
+:root {
+    --primary-color: #f55c64;
+    --secondary-color: #8c1a1a;
+    --accent-color: #ea6666;
+}
+
+.cadastro-container,
+.cadastro-container * {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* Container principal */
+.cadastro-container {
+    min-height: 100vh;
+    padding: 180px 16px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg-primary);
+}
+
+.cadastro-container h2 {
+    margin-bottom: 32px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.cadastro-form {
+    width: 100%;
+    max-width: 420px;
+    background: var(--bg-secondary);
+    padding: 40px 32px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.cadastro-form .row {
+    display: flex;
+    gap: 16px;
+}
+
+.cadastro-form .field {
+    position: relative;
+    flex: 1;
+}
+
+.cadastro-form input,
+.cadastro-form select {
+    width: 100%;
+    height: 56px;
+    padding: 18px 16px 0;
+    border-radius: 12px;
+    border: 2px solid var(--border-light);
+    background: #fff;
+    font-size: 1rem;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.cadastro-form input:focus,
+.cadastro-form select:focus {
+    border-color: var(--primary-color);
+}
+
+.cadastro-form label {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    font-size: 0.95rem;
+    color: var(--text-light);
+    background: #fff;
+    padding: 0 6px;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.cadastro-form input:focus + label,
+.cadastro-form input:valid + label,
+.cadastro-form select:focus + label,
+.cadastro-form select:valid + label {
+    top: 6px;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+}
+
+.cadastro-form select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg fill='none' stroke='%23999' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+}
+
+
+.cadastro-form input[type="date"] {
+    padding-top: 30px;
+}
+
+.cadastro-form .btn-primary {
+    margin-top: 10px;
+    height: 56px;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cadastro-form .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(245, 92, 100, 0.35);
+}
+
+
+.cadastro-form .btn-secondary {
+    height: 52px;
+    border-radius: 12px;
+    border: 2px solid var(--border-light);
+    background: #fff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.cadastro-form .btn-secondary:hover {
+    border-color: var(--primary-color);
+}
+
+
+/* Mobile */
+@media (max-width: 550px) {
+    .cadastro-container {
+        padding: 220px 16px 60px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 551px) and (max-width: 1100px) {
+    .cadastro-container {
+        padding: 220px 16px 70px;
+    }
+}

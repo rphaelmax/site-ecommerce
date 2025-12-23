@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/logo-star.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="icon-esquerda" role="button" tabindex="0">
+            <svg viewBox="0 0 24 24" focusable="false">
+                <circle cx="11" cy="11" r="7" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+        </div>
+        <div class="main-container">
+            <div class="logo-star"><img src="assets/astrologo.png" class="astrologo"></div>
+            <nav class="navtab">
+                <a href="index.html" tabindex="0">Início</a>
+                <a href="produtos.html" class="dropdown" tabindex="0">
+                    Produtos
+                    <svg viewBox="0 0 24 24" focusable="false">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </a>
+                <a href="contato.html" tabindex="0">Contato</a>
+                <a href="sobre.html" tabindex="0">Sobre</a>
+            </nav>
+        </div>
+        <div class="icons-direita">
+            <a href="cadastro.html" class="cadastro-link">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" title="User icon">
+                    <circle cx="12" cy="7" r="4" />
+                    <path d="M5.5 21a7.5 7.5 0 0 1 13 0" />
+                </svg>
+            </a>
+            <a href="#carrinho" class="cart-link">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" title="Shopping cart icon">
+                    <circle cx="9" cy="21" r="1" />
+                    <circle cx="20" cy="21" r="1" />
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <aside id="carrinho">
+        <div class="header-carrinho">
+            <h2>Carrinho</h2>
+            <a href="#" class="fechar">✖</a>
+        </div>
+        <div class="conteudo-carrinho">
+            <p>Seu carrinho está vazio 🛒</p>
+        </div>
+    </aside>
+
+    <div class="banner">
+        <a><img src="assets/banner-test.png" alt="Banner ASTRO"></a>
+        <div class="banner-overlay">
+            <h1 class="banner-title">Nova Coleção 2025</h1>
+            <p class="banner-subtitle">Estilo que transcende</p>
+            <a href="produtos.html" class="banner-btn">Ver Produtos</a>
+        </div>
+    </div>
+
+    <!-- Seção de Destaques -->
+    <section class="destaques">
+        <h2 class="section-title">Em Destaque</h2>
+        <div class="destaques-grid">
+            <a href="produto.html" class="destaque-card">
+                <div class="destaque-image">
+                    <img src="assets/camiseta.png" alt="Camiseta ASTRO">
+                    <span class="badge-novo">Novo</span>
+                </div>
+                <div class="destaque-info">
+                    <h3>Camiseta ASTRO Classic</h3>
+                    <p class="preco">R$ 129,90</p>
+                </div>
+            </a>
+            <a href="produto.html" class="destaque-card">
+                <div class="destaque-image">
+                    <img src="assets/camiseta.png" alt="Camiseta ASTRO">
+                </div>
+                <div class="destaque-info">
+                    <h3>Camiseta ASTRO Premium</h3>
+                    <p class="preco">R$ 149,90</p>
+                </div>
+            </a>
+            <a href="produto.html" class="destaque-card">
+                <div class="destaque-image">
+                    <img src="assets/camiseta.png" alt="Camiseta ASTRO">
+                    <span class="badge-sale">-20%</span>
+                </div>
+                <div class="destaque-info">
+                    <h3>Camiseta ASTRO Limited</h3>
+                    <p class="preco">R$ 159,90</p>
+                </div>
+            </a>
+        </div>
+        <div class="btn-center">
+            <a href="produtos.html" class="btn-ver-mais">Ver Todos os Produtos</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ASTRO</h4>
+                <p>Streetwear & Lifestyle</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links</h4>
+                <a href="produtos.html">Produtos</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>contato@astro.com</p>
+                <p>(31) 99999-9999</p>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Astro. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const id = this.getAttribute('href');
+
+                if (id === '#carrinho') return;
+
+                const target = document.querySelector(id);
+                if (!target) return;
+
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        document.querySelectorAll('.destaque-card').forEach((el) => observer.observe(el));
+    </script>
+
+
+</body>
+
+</html>
